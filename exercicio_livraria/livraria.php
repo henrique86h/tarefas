@@ -5,11 +5,12 @@ $livros = [
 ];
 ?>
 <ul>
-	<?php foreach ($livros $livro) { ?>
+	<?php foreach ($livros as $livro): ?>
       <li>
-          <h3><?php $livro['titulo'] ?></h3>
-          <p>Autor: <?php  $livro['autor'] ?></p>
-          <p>Preço: <?php  "R$ " . $livro['preco'] ?></p>
+          <h3><?php echo $livro['titulo']; ?></h3>
+          <p>Autor: <?php echo $livro['autor']; ?></p>
+          <p>Preço: <?php echo "R$ " . $livro['preco']; ?></p>
       </li>
-  <?php } 
+  <?php endforeach; ?>
 </ul>
+
