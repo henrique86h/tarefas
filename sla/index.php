@@ -10,6 +10,7 @@
         <th>Título</th>
         <th>Descrição</th>
         <th>Status</th>
+        <th>&nbsp;</th>
     </tr>
     <?php
     include("conexao.php");
@@ -23,7 +24,7 @@
                 <?php
                 if($umaTarefa['status'] == 0){
                 ?>
-                    <a href='editar-salvar.php'>✅</a>
+                    <a href='editar-salvar.php?id=<?php echo $umaTarefa['id'] ?>' class="btn">✅</a>
                 <?php    
                 }
                 ?>
@@ -40,6 +41,9 @@
                 } 
                 ?>
             
+            </td>
+            <td>
+                <a href="excluir.php?id=<?php echo $umaTarefa['id']?>" class="btn">❌</a>
             </td>
         </tr>
         
