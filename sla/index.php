@@ -43,7 +43,7 @@
             
             </td>
             <td>
-                <a href="excluir.php?id=<?php echo $umaTarefa['id']?>" class="btn">❌</a>
+                <a href="excluir.php?id=<?php echo $umaTarefa['id']?>" class="btn" onclick="return confirm('Tem certeza que deseja deletar essa tarefa?')">❌</a>
             </td>
         </tr>
         
